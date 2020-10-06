@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'fitm.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'cactu',
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST' : 'localhost',
-        'USER': 'root',
-        'PASSWORD': '',
-        'PORT' : '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     },
     # 'cacti':{
     #     'NAME': 'cacti', #DatabaseName

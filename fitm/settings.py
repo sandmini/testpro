@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'jxk)q$9**x*d15c6@!mcryg^ihv()*+)ms0i-c%gs*a*&q_mwz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['fitm-monitoring.app.ruk-com.cloud']
 
@@ -136,7 +136,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/webroot/ROOT/static/',
-]
+#STATICFILES_DIRS = [
+  #  BASE_DIR / "static",
+  #  '/var/www/webroot/ROOT/static/',
+#]

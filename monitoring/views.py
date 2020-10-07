@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.template import loader
+import requests
 
 
 # Create your views here.
+url = 'https://notify-api.line.me/api/notify'
+token = 'NuuUuOmWepLTjLylkfdFwppgMhxjTeNiF4wE6Kdg70a'
+headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'Bearer '+token}
 
 def index(request):
     return render(request,'index.html')
@@ -23,4 +27,7 @@ def report(request):
 def login(request):
     username = request.GET['username']
     password = request.GET['password']
+    msg = ("เข้าสู่ระบบ โดย คุณ :"+username)
+    r = requests.post(url, headers=headers , data = {'message':msg})
+
     return render(request,'home.html',{'username':username})

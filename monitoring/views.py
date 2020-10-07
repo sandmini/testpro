@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.template import loader
-from django.http import HttpResponse
+from django.http import HttpResponses
 
 # Create your views here.
 
 def index(request):
-    return render(request,'home.html')
+    return render(request,'index.html')
 
 def home(request):
     return render(request,'home.html')

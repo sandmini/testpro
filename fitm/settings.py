@@ -76,8 +76,7 @@ WSGI_APPLICATION = 'fitm.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {},
-    'cacti':{
+    'default': {
         'NAME': 'cacti', #DatabaseName
         'ENGINE': 'django.db.backends.mysql',
         'HOST' : 'node4408-fitm-monitoring.app.ruk-com.cloud',
@@ -85,6 +84,14 @@ DATABASES = {
         'PASSWORD': 'EVBylv99113',
         'PORT' : '3306',
     },
+    # 'cacti':{
+    #     'NAME': 'cacti', #DatabaseName
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'HOST' : 'node4408-fitm-monitoring.app.ruk-com.cloud',
+    #     'USER': 'root',
+    #     'PASSWORD': 'EVBylv99113',
+    #     'PORT' : '3306',
+    # },
     # 'cactu':{
     #     'NAME': 'cactu',
     #     'ENGINE': 'django.db.backends.mysql',

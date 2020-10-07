@@ -21,6 +21,6 @@ def report(request):
     return render(request,'report.html')
 
 def login(request):
-    username = request.GET['username']
-    password = request.GET['password']
+    username = request.POST['username']
+    password = request.POST['password']
     return render(request,'home.html',{'username':username})

@@ -27,10 +27,19 @@ def report(request):
 def login(request):
     username = request.GET['username']
     password = request.GET['password']
-    msg = ("เข้าสู่ระบบ โดย คุณ :"+username)
-    r = requests.post(url, headers=headers , data = {'message':msg})
+    if ((username=='admin') and  (password == 'admin'))  :
+        msg = ("เข้าสู่ระบบ โดย คุณ :"+username)
+        r = requests.post(url, headers=headers , data = {'message':msg})
 
-    return render(request,'home.html',{'username':username})
+        return render(request,'home.html',{'username':username})
+    
+    else:
+        msg = ("เข้าสู่ระบบ โดย คุณ :"+username)
+        r = requests.post(url, headers=headers , data = {'message':msg})
+
+        return render(request,'index.html',{'username':username})
+        
+    
 
 def logout(request):
     msg = ("ออกจากระบบเเล้ว")

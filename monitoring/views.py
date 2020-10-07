@@ -31,3 +31,9 @@ def login(request):
     r = requests.post(url, headers=headers , data = {'message':msg})
 
     return render(request,'home.html',{'username':username})
+
+def logout(request):
+    msg = ("ออกจากระบบเเล้ว")
+    r = requests.post(url, headers=headers , data = {'message':msg})
+
+    return render(request,'index.html')

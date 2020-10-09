@@ -156,3 +156,9 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = '/ROOT/static/'
+
+WHITENOISE_MIMETYPES = {
+    '.js': 'text/javascript',
+    '.css': 'text/css',
+    '.html': 'text/html',
+}

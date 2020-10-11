@@ -88,17 +88,17 @@
                         <tfoot>
                             <tr>
                                 <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
+                                <th>Status</th>
+                                <th>Uptime</th>
                                
                             </tr>
                         </tfoot>
                         <tbody>
                             {% for data in  host_snmp %} 
                             <tr>
-                                <td>{{host_snmp.hostname}}</td>
-                                <td>{{host_snmp.description}}</td>
-                                <td>{{host_snmp.uptime}}</td>
+                                <td>{{data.hostname}}</td>
+                                <td>{{data.description}}</td>
+                                <td>{{data.uptime}}</td>
                                
                             </tr>
                              {% endfor %}

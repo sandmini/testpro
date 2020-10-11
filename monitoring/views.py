@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.template import loader
+from django.models import Host
 import requests
 
 
@@ -46,3 +47,7 @@ def logout(request):
     r = requests.post(url, headers=headers , data = {'message':msg})
 
     return render(request,'index.html')
+
+def host_snmp (request):
+    host_snmp = Host.objects.all()
+    return render(request,'home.html',{'host_snmp':host_snmp})

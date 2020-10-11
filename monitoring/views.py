@@ -6,6 +6,7 @@ from .models import test1
 import requests
 
 
+
 # Create your views here.
 url = 'https://notify-api.line.me/api/notify'
 token = 'NuuUuOmWepLTjLylkfdFwppgMhxjTeNiF4wE6Kdg70a'

@@ -77,11 +77,13 @@
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
+                            { % for data in  host_snmp %}
                             <tr>
                                 <th>Name</th>
                                 <th>Status</th>
                                 <th>Uptime</th>
                             </tr>
+                            {% endfor %}
                         </thead>
                         <tfoot>
                             <tr>

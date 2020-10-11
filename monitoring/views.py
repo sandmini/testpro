@@ -13,7 +13,7 @@ headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'B
 
 #Query Data Host_snmp show in table on home.html page
 def host_snmp(request):
-  data = Host.objects.all()
+  data = "hnubyy"
   return render(request,    'home.html',{'hostname': data})
 
 def index(request):

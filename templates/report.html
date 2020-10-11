@@ -1,7 +1,14 @@
 {% extends "main.html" %}
 {% block content %}
+<table>
+<tr>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Uptime</th>
+</tr>
 
 {% for qry in hostname %} 
+
      <tr>
          <td>sgg</td>
          <td>{{ qry.hostname }}</td>
@@ -10,5 +17,6 @@
                                
     </tr>
 {% endfor %}
+</table>
 
 {% endblock %}

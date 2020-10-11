@@ -14,14 +14,14 @@ headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'B
 
 #Query Data Host_snmp show in table on home.html page
 def hello(request):
-    data11 = 'hnubyy'
+    data11 = "hnubyy"
     return render(request,'home.html',{'hostname':data11})
 
 def index(request):
     return render(request,'index.html')
 
 def home(request):
-    return render(request,'home.html',{'hostname':'HELLOO'})
+    return render(request,'home.html')
 
 def page2(request):
     return render(request,'page2.html')

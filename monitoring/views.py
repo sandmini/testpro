@@ -21,7 +21,7 @@ def index(request):
     return render(request,'index.html')
 
 def home(request):
-    return render(request,'home.html')
+    return render(request,'home.html',{'hostname':'HELLOO'})
 
 def page2(request):
     return render(request,'page2.html')

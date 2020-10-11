@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.template import loader
 from .models import Host
+from .models import test1
 import requests
 
 
@@ -12,7 +13,7 @@ headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'B
 
 #Query Data Host_snmp show in table on home.html page
 def hello (request):
-    data = Host.objects.all()
+    data = test1.objects.all()
     return render(request,'home.html',{'posts':data})
 
 def index(request):

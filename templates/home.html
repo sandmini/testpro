@@ -94,11 +94,11 @@
                             </tr>
                         </tfoot>
                         <tbody>
-                            {% for data in  host_snmp %} 
+                            {% for post in posts %} 
                             <tr>
-                                <td>{{data.hostname}}</td>
-                                <td>{{data.description}}</td>
-                                <td>{{data.uptime}}</td>
+                                <td>{{post.hostname}}</td>
+                                <td>{{post.description}}</td>
+                                <td>{{post.uptime}}</td>
                                
                             </tr>
                              {% endfor %}

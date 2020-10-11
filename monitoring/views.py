@@ -12,9 +12,9 @@ token = 'NuuUuOmWepLTjLylkfdFwppgMhxjTeNiF4wE6Kdg70a'
 headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'Bearer '+token}
 
 #Query Data Host_snmp show in table on home.html page
-def Host_snmp(request):
-  Host_snmp = Host.objects.all()
-  return render(request, 'home.html',{'Host_snmp': Host_snmp})
+def host_snmp(request):
+  data = Host.objects.all()
+  return render(request, 'home.html',{'data': data})
 
 def index(request):
     return render(request,'index.html')

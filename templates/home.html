@@ -96,9 +96,9 @@
                         <tbody>
                             { % for data in  host_snmp %} 
                             <tr>
-                                <td>Host</td>
-                                <td>Junior Technical Author</td>
-                                <td>San Francisco</td>
+                                <td>{{host_snmp.hostname}}</td>
+                                <td>{{host_snmp.description}}</td>
+                                <td>{{host_snmp.uptime}}</td>
                                
                             </tr>
                             {% endfor %}

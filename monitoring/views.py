@@ -37,8 +37,9 @@ def login(request):
     if ((username == 'admin') and  (password == 'admin'))  :
         msg = ("เข้าสู่ระบบ โดย คุณ :"+username)
         r = requests.post(url, headers=headers , data = {'message':msg})
+        data = 'hnubyy'
 
-        return render(request,'home.html',{'username':username})
+        return render(request,'home.html',{'username':username},{'data':data})
     
     else:
         msg = ("มีการพยายามเข้าสู่ระบบ โดย คุณ :"+username)

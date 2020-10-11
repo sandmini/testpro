@@ -25,6 +25,8 @@ urlpatterns = [
     path('report/', views.report, name='report'),
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
+    path('', views.host_snmp),
+
    
     
 ]

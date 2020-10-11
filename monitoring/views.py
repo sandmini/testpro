@@ -10,6 +10,11 @@ url = 'https://notify-api.line.me/api/notify'
 token = 'NuuUuOmWepLTjLylkfdFwppgMhxjTeNiF4wE6Kdg70a'
 headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'Bearer '+token}
 
+#Query Data Host_snmp show in table on home.html page
+def host_snmp (request):
+    data = Host.objects.all()
+    return render(request,'home.html',{'host_snmp':data})
+
 def index(request):
     return render(request,'index.html')
 
@@ -48,7 +53,4 @@ def logout(request):
 
     return render(request,'index.html')
 
-#Query Data Host_snmp show in table on home.html page
-def host_snmp (request):
-    data = Host.objects.all()
-    return render(request,'home.html',{'host_snmp':data})
+
